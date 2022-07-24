@@ -1,7 +1,10 @@
-from czlowiek import Czlowiek
+from firma import Firma
 
 def main():
-    pass
+    f = Firma()
+
+    f.wczytaj('pracownicy.txt', 'wspolpracownicy.txt')
+
 
 if __name__ == '__main__':
     main()

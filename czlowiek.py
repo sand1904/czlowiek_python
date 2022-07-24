@@ -1,12 +1,12 @@
 from abc import ABC, abstractmethod # abstract class module
 
-class Czlowiek(ABC): # abstract class
+class Czlowiek(ABC): # base abstract class
     @classmethod
     @abstractmethod
     def getOpiekun(cls): # pure virtual / abstract function
         pass
 
-    def __init__(self, imie, nazwisko, pesel, email): # constructor
+    def __init__(self, imie = 'brak', nazwisko = 'brak', pesel = 'brak', email = 'brak'): # constructor
         self.imie = imie
         self.nazwisko = nazwisko
         self.pesel = pesel
