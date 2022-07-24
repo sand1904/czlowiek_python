@@ -1,4 +1,4 @@
-
+from czlowiek import Czlowiek
 
 def main():
     pass
