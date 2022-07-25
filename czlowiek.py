@@ -7,19 +7,26 @@ class Czlowiek(ABC): # base abstract class
         pass
 
     def __init__(self, imie = 'brak', nazwisko = 'brak', pesel = 'brak', email = 'brak'): # constructor
-        self.imie = imie
-        self.nazwisko = nazwisko
-        self.pesel = pesel
-        self.email = email
 
+        # protected variables:
+        self._imie = imie
+        self._nazwisko = nazwisko
+        self._pesel = pesel
+        self._email = email
+
+
+    # public methods:
     def getPesel(self):
-        return self.pesel
+        return self._pesel
+
 
     def getImie(self):
-        return self.imie
+        return self._imie
+
 
     def getNazwisko(self):
-        return self.nazwisko
+        return self._nazwisko
+
 
     def getEmail(self):
-        return self.email
+        return self._email

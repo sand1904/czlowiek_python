@@ -5,18 +5,20 @@ class Pracownik(Czlowiek):
                  pracid = -1, szefid = -1): # constructor
         Czlowiek.__init__(self, imie, nazwisko, pesel, email) # inheritance of parent's class constructor
 
-        self.umowa = umowa
-        self.pracid = pracid
-        self.szefid = szefid
+        # protected variables:
+        self._umowa = umowa
+        self._pracid = pracid
+        self._szefid = szefid
 
 
+    # public methods:
     def getDataUmowy(self):
-        return self.umowa
+        return self._umowa
 
 
     def getID(self):
-        return self.pracid
+        return self._pracid
 
 
     def getOpiekun(self):# virtual function override
-        return self.szefid
+        return self._szefid

@@ -3,9 +3,12 @@ from wspolpracownik import Wspolpracownik
 
 class Firma:
     def __init__(self): # constructor
-        self.file1_list = None
-        self.file2_list = None
+        # private variables:
+        self.__file1_list = None
+        self.__file2_list = None
 
+
+    # public methods:
     def wczytaj(self, fileprac, filewspolprac): # reading data from txt files
         file1_list = [] # list with file1 contents [ list of lists line by line ]
         file2_list = [] # list with file2 contents
@@ -23,8 +26,8 @@ class Firma:
                 file2_list.append(prac_list)
 
         # make file lists usable for other methods in this class
-        self.file1_list = file1_list
-        self.file2_list = file2_list
+        self.__file1_list = file1_list
+        self.__file2_list = file2_list
 
 
     def urodziny(self, date1: int, date2: int): # creates a list with data of people that have birthday on day passed in the argument
@@ -39,10 +42,10 @@ class Firma:
             s_date = str(date1) + '-' + str(date2)
 
 
-        for i in self.file1_list: # iterate through file 1 contents list
-            if s_date in self.file1_list:
+        for i in self.__file1_list: # iterate through file 1 contents list
+            if s_date in self.__file1_list:
                 uro_list.append(i)
 
-        for i in self.file2_list: # iterate through file 2 contents list
-            if s_date in self.file2_list:
+        for i in self.__file2_list: # iterate through file 2 contents list
+            if s_date in self.__file2_list:
                 uro_list.append(i)
