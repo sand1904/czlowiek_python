@@ -29,6 +29,10 @@ class Firma:
         self.__file1_list = file1_list
         self.__file2_list = file2_list
 
+        # closing files
+        file1.close()
+        file2.close()
+
 
     def urodziny(self, date1: int, date2: int): # creates a list with data of people that have birthday on day passed in the argument
         # month, day
